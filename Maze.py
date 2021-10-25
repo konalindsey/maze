@@ -1,3 +1,8 @@
+"""
+Kona Lindsey
+10/25/2021
+
+"""
 from Stack import *
 from Queue import *
 from copy import deepcopy
@@ -5,7 +10,7 @@ from enum import Enum
 from typing import List, NamedTuple, Optional
 import random
 
-
+###########################
 
 class Contents(str, Enum):
     ''' create an enumeration to define what the visual contents of a Cell are;
@@ -18,11 +23,13 @@ class Contents(str, Enum):
     BLOCKED = "░"  # "X"
     PATH = "★"  # "*"
 
+#############################
 
 class Position(NamedTuple):
     row: int
     col: int
 
+#############################
 
 class Cell:
     ''' allows us to use Cell as a data type -- an ordered triple of 
@@ -53,6 +60,7 @@ class Cell:
                self._position.col == other._position.col and \
                self._contents == other._contents
 
+##############################
 
 class Node:
     def __init__(self, cell: Cell, parent: Optional['Node']):
@@ -63,6 +71,7 @@ class Node:
         parent = "None" if self.parent is None else self.parent.cell
         return f"{self.cell} : parent = {parent}"
 
+###############################
 
 class Maze:
     ''' class representing a 2D maxe of Cell objects '''

@@ -1,7 +1,4 @@
-# Changes required:
-#  4) implement the A* algorithm as given in psuedocode in slides
-# Then compare results of your BFS, DFS, and A* vs that shown in slides
-# on the generated 10x10.
+
 import copy
 
 from Stack import *
